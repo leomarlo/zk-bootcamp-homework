@@ -1,0 +1,56 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%opening
+\title{Answers to Homework 1}
+\author{Leonhard Horstmeyer (Leo Marlo\#1048)}
+
+\begin{document}
+
+\maketitle
+
+\section*{Question 1}
+\paragraph{Odd Squares:}
+I think I can actually prove this.
+So we know that 
+\begin{equation}
+(a+b) \;\text{mod} \;N \equiv a \;\text{mod}\; N + b \;\text{mod} \;N 
+\end{equation}
+from modular arithmetics. In other words (writing out the definition of equivalence $\equiv$):
+\begin{equation}(a+b) \;\text{mod}\; N = \left( a \;\text{mod}\; N + b \;\text{mod}\; N\right) \;\text{mod}\; N
+\end{equation}
+So let $x$ be some odd number, that is for any $x$ there exists a natural number $y\in \mathbb N$ such that $x=2y+1$.\\
+We prove by induction. For $x=1$ the statement is obviously true, since $1^2 \;\text{mod}\; 8 = 1$. Suppose now that $x^2 \;\text{mod}\; 8 = c$, where $c=1$ in our case. Then consider the next odd number $x+2$:
+\begin{align}
+(x+2)^2 \; \text{mod} \; 8 
+=& \left(x^2 + 4x + 4\right)\;\text{mod} \; 8 \nonumber\\
+=& \left(x^2\;\text{mod} \; 8 + \left(4x\right)\text{mod} \; 8 + 4 \;\text{mod} \; 8 \right)\;\text{mod} \; 8
+\nonumber\\
+=& \left( c + \left(4x\right)\text{mod} \; 8  + 4 \right) \;\text{mod} \; 8 \nonumber\\
+=& \left( c + \left(8 y + 4\right)\text{mod} \; 8  + 4 \right) \;\text{mod} \; 8 \nonumber\\
+=& \left( c + \left((8 y) \text{mod} \; 8  + 4 \;\text{mod} \; 8 \right)\text{mod} \; 8  + 4 \right) \;\text{mod} \; 8  \nonumber\\
+=& \left( c + 4 \;\text{mod} \; 8 + 4 \right) \;\text{mod} \; 8 \nonumber\\
+=& \;(c+8)\text{mod} \; 8  =  c = 1
+\end{align}
+
+\paragraph{Even squares:}
+For even squares the situation is the same, except that the result is always 4, i.e. $x^2 \;\text{mod} \; 8 = 4$. For $x=2$ the result is obviously true. Let's now assume it is true for some even $x$, then for $x+2$ we go through the same calculation as above, except that we take $c=4$.
+
+
+\section*{Question 3}
+\begin{enumerate}
+ \item $\mathcal{O}(n)$ means that as we take the limit $n\to \infty$ the thing divided by $n$ converges to a non-zero and non-infinite number.
+ \item  $\mathcal{O}(1)$ means that as we take the limit $n\to \infty$ the thing converges to a non-zero and non-infinite number.
+ \item $\mathcal{O}(\log n)$ means that as we take the limit $n\to \infty$ the thing divided by $\log n$ converges to a non-zero and non-infinite number.
+\end{enumerate}
+
+Here  $\mathcal{O}(n)$ is the worst behaved, then comes $\mathcal{O}(\log n)$. The best is $\mathcal{O}(1)$.
+
+
+
+
+
+
+\end{document}
