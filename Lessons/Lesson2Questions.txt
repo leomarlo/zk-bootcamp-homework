@@ -1,0 +1,3 @@
+1) What does GF mean in the Pellas and Vesta curves
+2) What is a rank-1 constraint system?
+3) AXB=C is supposed to mean A times B = C, right?
