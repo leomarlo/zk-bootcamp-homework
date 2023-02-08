@@ -1,2 +1,4 @@
-Homeworks/
-Lessons/
+
+*.aux
+*.log
+*.synctex.gz
