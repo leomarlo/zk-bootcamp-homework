@@ -1,0 +1,3 @@
+[submodule "ZeroKnowledgeBootcamp"]
+	path = ZeroKnowledgeBootcamp
+	url = https://github.com/ExtropyIO/ZeroKnowledgeBootcamp.git
